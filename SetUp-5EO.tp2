@@ -1,0 +1,490 @@
+BACKUP ~5EO/backup~
+AUTHOR ~aquadrizzt@gmail.com~
+VERSION ~0.0~ 
+
+/* Language Settings */
+AUTO_TRA ~5EO/tra/%s~
+LANGUAGE ~English~ ~english~ ~5EO/tra/english/setup.tra~ 
+
+BEGIN @0
+
+//copying new 2das 
+COPY ~5EO/data/core/2da~ ~override~ 
+//fighter, thief, sorcerer, shaman 
+//race ability scores 
+//spells knwon = 0 for sorc and shaman
+//spell slot progressions 
+//saves progression (15 universally) and thac0 (18-11)  
+//hp 
+
+
+//Updating Race Descriptions
+STRING_SET ~9550~  @1 //human
+STRING_SET ~9552~  @2  //elf 
+STRING_SET ~9555~  @3  //halfelf 
+STRING_SET ~9551~  @4  //dwarf
+STRING_SET ~9554~  @5  //halfling
+STRING_SET ~9553~  @6  //gnome
+STRING_SET ~24204~ @7  //halforc 
+
+//Updating Ability Score Descriptions
+STRING_SET ~9582~  @10 //strength
+STRING_SET ~9584~  @11 //dexterity
+STRING_SET ~9583~  @12 //constitution
+STRING_SET ~9585~  @13 //intelligence
+STRING_SET ~9586~  @14 //wisdom
+STRING_SET ~9587~  @15 //charisma
+
+//Updating Weapon Prof labels 
+STRING_SET ~25000~ @20 //bastard sword -> basic 
+STRING_SET ~25001~ @21 //long sword -> light blades 
+STRING_SET ~25002~ @22 //short sword -> heavy blades 
+STRING_SET ~25003~ @23 //axe -> axe 
+STRING_SET ~25004~ @24 //greatsword -> hammers 
+STRING_SET ~25005~ @25 //katana -> polearms 
+STRING_SET ~25006~ @26 //scimitar -> spiked 
+STRING_SET ~25007~ @27 //dagger -> thrown 
+STRING_SET ~25008~ @28 //warhammer -> crossbows 
+STRING_SET ~25009~ @29 //club -> bows 
+STRING_SET ~25010~ @67 //spear -> spells 
+STRING_SET ~25011~ @69 //halberd -> armor 	
+STRING_SET ~25012~ @71 //flail -> shield 	
+
+//updating weapon prof full descriptions
+STRING_SET ~25024~ @30 //bastard sword -> basic 
+STRING_SET ~25025~ @31 //long sword -> light blades 
+STRING_SET ~25026~ @32 //short sword -> heavy blades 
+STRING_SET ~25027~ @33 //axe -> axe 
+STRING_SET ~25028~ @34 //greatsword -> hammers 
+STRING_SET ~25029~ @35 //katana -> polearms 
+STRING_SET ~25030~ @36 //scimitar -> spiked 
+STRING_SET ~25031~ @37 //dagger -> thrown 
+STRING_SET ~25032~ @38 //warhammer -> crossbows 
+STRING_SET ~25033~ @39 //club -> bows 
+STRING_SET ~25034~ @68 //spear -> spells
+STRING_SET ~25035~ @70 //halberd -> armor
+STRING_SET ~25036~ @72 //flail -> shield 
+
+
+//updating save-related strings
+STRING_SET ~17380~ @40 //save vs. death -> save vs. str [in character screen]
+STRING_SET ~17381~ @41 //save vs. wand -> save vs. dex [in character screen]
+STRING_SET ~17382~ @42 //save vs. poly -> save vs. con [in character screen]
+STRING_SET ~17383~ @43 //save vs. breath -> save vs. int [in character screen]
+STRING_SET ~17384~ @44 //save vs. spells -> save vs. wis/cha [in character screen]
+
+STRING_SET ~14003~ @45 //save vs. str 
+STRING_SET ~14004~ @46 //save vs. dex 
+STRING_SET ~14005~ @47 //save vs. con 
+STRING_SET ~14006~ @48 //save vs. int 
+STRING_SET ~14009~ @49 //save vs. wis 
+
+STRING_SET ~10048~ @50 //failed save vs. str
+STRING_SET ~10049~ @51 //failed save vs. dex
+STRING_SET ~10050~ @52 //failed saving throw vs. con 
+STRING_SET ~10051~ @53 //failed saving throw vs. int
+STRING_SET ~10052~ @54 //failed save vs. wis
+
+STRING_SET ~5277~ @55 //reduced str
+STRING_SET ~5278~ @56 //reduced dex
+STRING_SET ~5279~ @57 //reduced con 
+STRING_SET ~5282~ @58 //reduced int
+STRING_SET ~5292~ @59 //reduced wis
+
+//updating damage type names 
+//magic cold -> necrotic
+//magic fire -> radiant
+//magic -> force 
+STRING_SET ~32435~ @60 //force 
+STRING_SET ~32438~ @61 //radiant 
+STRING_SET ~32439~ @62 //necrotic 
+STRING_SET ~24451~ @64 //Radiant 
+STRING_SET ~24452~ @65 //Necrotic 
+STRING_SET ~24453~ @66 //Force 
+
+//Races
+COPY ~5EO/data/core/races~ ~override~ 
+
+//Advantage and Res 
+COPY_EXISTING ~splstate.ids~ ~override~
+	APPEND_FILE ~5EO/data/core/advantage/newstates.txt~ 
+
+	COPY_EXISTING ~splprot.2da~ ~override~ 
+		APPEND_FILE ~5EO/data/core/new/newsplprot.txt~ 
+		
+COPY ~5EO/data/core/advantage~ ~override~ 
+
+//Ability Score Bonuses 
+COPY ~5EO/data/core/ability~ ~override~ 
+
+BEGIN ~Champion~ 
+
+INCLUDE ~5EO/lib/fl#add_kit_ee.tpa~
+
+COPY ~5EO/data/class/general/QD+ATTK.spl~ ~override~ // +1 APR 
+     ~5EO/data/class/general/QD_SPL-.spl~ ~override~ // +1 spell per level (for sorcerer based kits)
+     ~5EO/data/class/general/QD_3RD.spl~ ~override~ // spell for 3rd casters (eldritch knight/arcane trickster)
+     ~5EO/data/class/general/QDSVST1.spl~ ~override~ // +1 str save  
+	 ~5EO/data/class/general/QDSVST2.spl~ ~override~ // +2 str save  
+	 ~5EO/data/class/general/QDSVDE1.spl~ ~override~ // +1 dex save  
+	 ~5EO/data/class/general/QDSVDE2.spl~ ~override~ // +2 dex save  
+	 ~5EO/data/class/general/QDSVCO1.spl~ ~override~ // +1 con save  
+	 ~5EO/data/class/general/QDSVCO2.spl~ ~override~ // +2 con save  
+	 ~5EO/data/class/general/QDSVIN1.spl~ ~override~ // +1 int save  
+	 ~5EO/data/class/general/QDSVIN2.spl~ ~override~ // +2 int save  
+	 ~5EO/data/class/general/QDSVWI1.spl~ ~override~ // +1 wis save  
+	 ~5EO/data/class/general/QDSVWI2.spl~ ~override~ // +2 wis save  
+	 ~5EO/data/class/general/QDSVCH1.spl~ ~override~ // +1 cha save  
+	 ~5EO/data/class/general/QDSVCH2.spl~ ~override~ // +2 cha save  
+	 ~5EO/data/class/general/QDWPALL.spl~ ~override~ // weap prof: all   
+	 ~5EO/data/class/general/QD_STY1.spl~ ~override~ // fighting style: archery 
+	 ~5EO/data/class/general/QD_STY2.spl~ ~override~ // fighting style: defense 
+	 ~5EO/data/class/general/QD_STY3.spl~ ~override~ // fighting style: dueling 
+	 ~5EO/data/class/general/QD_STY4.spl~ ~override~ // fighting style: great weapon fighting 
+	 ~5EO/data/class/general/QD_STY5.spl~ ~override~ // fighting style: protection 
+	 ~5EO/data/class/general/QD_STY6.spl~ ~override~ // fighting style: two weapon fighting 
+
+
+//--------------------
+// Fighter: Champion 
+//--------------------
+
+ADD_KIT ~QD_FTR1~
+	~QD_FTR1 1 1 1 1 1 1 1 1~ //clasweap.2da
+	~QD_FTR1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da 	  	
+	~QD_FTR1 0 0 0 0 0 0~ //abclasrq.2da 
+	~QD_FTR1 0 0 0 0 0 0~ //abclsmod.2da
+	~QD_FTR1 0 0 0 0 0 0~ //abdcdsrq.2da
+	~QD_FTR1 0 0 0 0 0 0~ //abdcscrq.2da 
+	~QD_FTR1 1 1 1 1 1 1 1 1 1~ //alignmnt.2da
+	~QD_FTR1 0 0 0 0 0 0~ //dualclas.2da
+	~5EO/data/class/fighter/champion/QD_FTR1.2DA~ //CLAB
+	~K_F_H K_F_HE K_F_E K_F_D K_F_G K_F_HL K_F_HO~
+	~0x00004000	2~ 
+	~Fi0~ 
+	~* * * * * * * * * * * * * * * * * * * *~
+	SAY @1000
+	SAY @1001
+	SAY @1002
+
+ACTION_IF GAME_IS ~bgee bg2ee iwdee~ THEN BEGIN
+	LAF fl#add_kit_ee
+		INT_VAR
+			briefdesc = RESOLVE_STR_REF (@1002)
+		STR_VAR
+			kit_name = QD_FTR1
+			hpclass = HPD10
+			clsrcreq = ~1	1	1	1	1	1	1~
+	END
+END    
+
+COPY ~5EO/data/class/fighter/base/QDFTR_1.spl~ ~override~ 
+	SAY NAME1 @2002 
+	SAY UNIDENTIFIED_DESC @2003
+	
+COPY ~5EO/data/class/fighter/base/QDFTR_2.spl~ ~override~ 
+	SAY NAME1 @2004 
+	SAY UNIDENTIFIED_DESC @2005 
+	
+COPY ~5EO/data/class/fighter/base/QDFTR_3.spl~ ~override~ 
+	SAY NAME1 @2006
+	SAY UNIDENTIFIED_DESC @2007 
+	
+COPY ~5EO/data/class/fighter/champion/QDFT1_1.spl~ ~override~ // +1 crit range
+	 ~5EO/data/class/fighter/champion/QDFT1_2.spl~ ~override~ // +str to movement 
+	 ~5EO/data/class/fighter/champion/QDFT1_2A.spl~ ~override~ // +str to movement 
+	 ~5EO/data/class/fighter/champion/QDFT1_3.spl~ ~override~ // +2 crit range 
+	 ~5EO/data/class/fighter/champion/QDFT1_4.spl~ ~override~ // survivor, condition
+	 ~5EO/data/class/fighter/champion/QDFT1_4A.spl~ ~override~ // survivor, base + con checks
+	 ~5EO/data/class/fighter/champion/QDFT1_4B.spl~ ~override~ // survivor, heal/con
+
+//--------------------
+// Fighter: Eldritch Knight  
+//--------------------
+ADD_KIT ~QD_FTR2~
+	~QD_FTR2 1 1 1 1 1 1 1 1~ //clasweap.2da
+	~QD_FTR2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da 	  	
+	~QD_FTR2 0 0 0 0 0 0~ //abclasrq.2da 
+	~QD_FTR2 0 0 0 0 0 0~ //abclsmod.2da
+	~QD_FTR2 0 0 0 0 0 0~ //abdcdsrq.2da
+	~QD_FTR2 0 0 0 0 0 0~ //abdcscrq.2da 
+	~QD_FTR2 1 1 1 1 1 1 1 1 1~ //alignmnt.2da
+	~QD_FTR2 0 0 0 0 0 0~ //dualclas.2da
+	~5EO/data/class/fighter/eldritch_knight/QD_FTR2.2DA~ //CLAB
+	~K_S_H K_S_HE K_S_E K_S_D K_S_G K_S_HL K_S_HO~
+	~0x00004000	19~ 
+	~Fi0~ 
+	~* * * * * * * * * * * * * * * * * * * *~
+	SAY @1003
+	SAY @1004
+	SAY @1005
+
+ACTION_IF GAME_IS ~bgee bg2ee iwdee~ THEN BEGIN
+	LAF fl#add_kit_ee
+		INT_VAR
+			briefdesc = RESOLVE_STR_REF (@1005)
+		STR_VAR
+			kit_name = QD_FTR2
+			hpclass = HPD10
+			clsrcreq = ~1	1	1	1	1	1	1~
+	END
+END    
+
+COPY ~5EO/data/class/fighter/eldritch_knight/QDFT2_1.spl~ ~override~ // attacks caused dis vs. spells 
+	 ~5EO/data/class/fighter/eldritch_knight/QDFT2_1.eff~ ~override~ //
+	 ~5EO/data/class/fighter/eldritch_knight/QDFTR_2A.spl~ ~override~ //movement speed on action surge bonus
+	 
+//--------------------
+// Rogue: Thief
+//--------------------
+ADD_KIT ~QD_ROG1~
+	~QD_ROG1 1 1 1 1 1 1 1 1~ //clasweap.2da
+	~QD_ROG1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ //weapprof.2da 	  	
+	~QD_ROG1 0 0 0 0 0 0~ //abclasrq.2da 
+	~QD_ROG1 0 0 0 0 0 0~ //abclsmod.2da
+	~QD_ROG1 0 0 0 0 0 0~ //abdcdsrq.2da
+	~QD_ROG1 0 0 0 0 0 0~ //abdcscrq.2da 
+	~QD_ROG1 1 1 1 1 1 1 1 1 1~ //alignmnt.2da
+	~QD_ROG1 0 0 0 0 0 0~ //dualclas.2da
+	~5EO/data/class/rogue/thief/QD_ROG1.2DA~ //CLAB
+	~K_T_H K_T_HE K_T_E K_T_D K_T_G K_T_HL K_T_HO~
+	~0x00004000	4~ 
+	~Th0~ 
+	~* * * * * * * * * * * * * * * * * * * *~
+	SAY @1006
+	SAY @1007
+	SAY @1008
+
+ACTION_IF GAME_IS ~bgee bg2ee iwdee~ THEN BEGIN
+	LAF fl#add_kit_ee
+		INT_VAR
+			briefdesc = RESOLVE_STR_REF (@1008)
+		STR_VAR
+			kit_name = QD_ROG1
+			hpclass = HPD8
+			clsrcreq = ~1	1	1	1	1	1	1~
+	END
+END 
+
+COPY ~5EO/data/class/rogue/base/QDROG_2.spl~ ~override~ 
+	 ~5EO/data/class/rogue/base/QDROG_2A.spl~ ~override~ 
+	 ~5EO/data/class/rogue/base/QDROG_2B.spl~ ~override~ 
+	 ~5EO/data/class/rogue/base/QDROG_3.spl~ ~override~ 
+	 ~5EO/data/class/rogue/base/QDROG_4.spl~ ~override~ 
+	 ~5EO/data/class/rogue/base/QDROG_5.spl~ ~override~ 
+	 ~5EO/data/class/rogue/base/QDROG_6.spl~ ~override~  
+	 ~5EO/data/class/rogue/base/QDWPROG.spl~ ~override~  
+
+COPY ~5EO/data/class/rogue/base/QDROG_7.spl~ ~override~ 
+	SAY NAME1 @2006
+	SAY UNIDENTIFIED_DESC @2007 
+	
+COPY ~5EO/data/class/rogue/thief/QDRG1_1.spl~ ~override~ // +dex to movement
+	 ~5EO/data/class/rogue/thief/QDRG1_1A.spl~ ~override~ // +dex to movement
+
+//-------------------
+// CHARACTER OPTIONS [install this last]
+//-------------------	 
+COPY ~5EO/data/class/general/QDCHOPT.spl~ ~override~ 
+	SAY NAME1 @2000 
+	SAY UNIDENTIFIED_DESC @2001 
+	
+COPY ~5EO/data/class/general/QDCHOPT.cre~ ~override~ 
+COMPILE ~5EO/data/class/general/QDCHOPT.baf~ 
+COMPILE ~5EO/data/class/general/QDCHOPT.d~ //needs to be compiled last or kit checks fail 
+
+//-------------------
+// ITEMIZATION 
+//-------------------	 
+BEGIN ~Items~
+
+//shift weapons to new profs
+//remove class restrictions
+COPY_EXISTING_REGEXP GLOB ~^.+\.itm$~ ~override~
+		PATCH_IF (SOURCE_SIZE > 0x71) BEGIN
+			READ_SHORT 0x31 "prof" ELSE 0
+			READ_SHORT 0x1c "type" ELSE 0
+			READ_BYTE 0x18 flags1  ELSE 0
+			READ_BYTE 0x19 flags2  ELSE 0
+			READ_BYTE 0x1a flags3  ELSE 0
+			READ_BYTE 0x1b flags4  ELSE 0
+			READ_SHORT 0x26 strreq  ELSE 0
+			READ_LONG 0x60 enchantment  ELSE 0
+			//removing class restrictions from weapons/shields/armor
+			PATCH_IF ("%prof%" = 89 || //bastard sword
+					  "%prof%" = 90 || //long sword
+					  "%prof%" = 91 || //short sword
+					  "%prof%" = 92 || //axe
+					  "%prof%" = 93 || //2h sword
+					  "%prof%" = 94 || //katana
+					  "%prof%" = 95 || //scimitar 
+					  "%prof%" = 96 || //dagger 
+					  "%prof%" = 97 || //war hammer
+					  "%prof%" = 98 || //spear
+					  "%prof%" = 99 || //halberd
+					  "%prof%" = 100 || //flail/morningstar
+					  "%prof%" = 101 || //mace
+					  "%prof%" = 102 || //staff
+					  "%prof%" = 103 || //xbow
+					  "%prof%" = 104 || //long bow
+					  "%prof%" = 105 || //shortbow
+					  "%prof%" = 106 || //darts
+					  "%prof%" = 107 || //slings
+					  "%prof%" = 115 || //club
+					  "%type%" = 31 || //xbow bolts
+					  "%type%" = 5  || //arrows
+					  "%type%" = 2  || //armor
+					  "%type%" = 7  || //helms
+					  "%type%" = 12) BEGIN //shields
+						WRITE_LONG 0x1e 0
+			END
+			//updating to new proficiency system 
+			PATCH_IF ("%prof%" = 96) BEGIN //dagger
+				WRITE_SHORT 0x31 89 //basic [bastard sword]	 
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=4 dicenumber=1 damagetype = 7 speed = 3 range = 1 END	
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon
+				WRITE_BYTE 0x19 (flags2 AND 96) //light weapon
+			END 
+			PATCH_IF ("%prof%" = 115) BEGIN //club
+				WRITE_SHORT 0x31 89 //basic [bastard sword]	  
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=4 dicenumber=1 damagetype = 2 speed = 3 range = 1 END	
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon
+				WRITE_BYTE 0x19 (flags2 AND 96) //light weapon				
+			END
+			PATCH_IF ("%prof%" = 102) BEGIN //staff
+				WRITE_SHORT 0x31 89 //basic [bastard sword]	  
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=4 dicenumber=1 damagetype = 2 speed = 7 range = 1 END		
+				WRITE_BYTE 0x18 (flags1 | 0x02) //2-handed weapon
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon
+			END
+			
+			PATCH_IF ("%prof%" = 90) BEGIN //longsword
+				WRITE_SHORT 0x31 90 //light blades [longsword]
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 damagetype = 3 speed = 5 range = 1 END
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon				
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon
+			END 
+			PATCH_IF ("%prof%" = 95) BEGIN //scimitar
+				WRITE_SHORT 0x31 90 //light blades [longsword]	
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=6 dicenumber=1 damagetype = 3 flag_keenedge=1 speed = 3 range = 1 END	
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 301 target = 1 parameter1 = 1 parameter2 = 1 timing = 2 END	//keen 
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon
+				WRITE_BYTE 0x19 (flags2 AND 96) //light weapon
+			END 
+			PATCH_IF ("%prof%" = 91) BEGIN //shortsword
+				WRITE_SHORT 0x31 90 //light blades [longsword]	  
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=6 dicenumber=1 damagetype = 7 speed = 3 range = 1 END	
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon
+				WRITE_BYTE 0x19 (flags2 AND 96) //light weapon				
+			END 
+			
+			PATCH_IF ("%prof%" = 89) BEGIN //bastard sword
+				WRITE_SHORT 0x31 91  //heavy blades [shortsword]	  
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=10 dicenumber=1 damagetype = 3 speed = 7 range = 1 END	
+				WRITE_BYTE 0x18 (flags1 | 0x02) //2-handed weapon					
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon
+			END 
+			PATCH_IF ("%prof%" = 93) BEGIN //2h sword
+				WRITE_SHORT 0x31 91  //heavy blades [shortsword]	  
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=6 dicenumber=2 damagetype = 3 speed = 9 range = 1 END
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 2 parameter1 = 6 parameter2 = 4 timing = 2 STR_VAR resource = ~qdwphvm~ END //heavy: gnome 
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 2 parameter1 = 5 parameter2 = 4 timing = 2 STR_VAR resource = ~qdwphvm~ END //heavy: halfling 				
+				WRITE_BYTE 0x18 (flags1 | 0x02) //2-handed weapon				
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon
+			END 
+			PATCH_IF ("%prof%" = 94) BEGIN //katana
+				WRITE_SHORT 0x31 91  //heavy blades [shortsword] 
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=10 dicenumber=1 damagetype = 3 speed = 9 flag_keenedge=1 range = 1 END	
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 301 target = 1 parameter1 = 1 parameter2 = 1 timing = 2 END	//keen 
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 2 parameter1 = 6 parameter2 = 4 timing = 2 STR_VAR resource = ~qdwphvm~ END //heavy: gnome 
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 2 parameter1 = 5 parameter2 = 4 timing = 2 STR_VAR resource = ~qdwphvm~ END //heavy: halfling 
+				WRITE_BYTE 0x18 (flags1 | 0x02) //2-handed weapon			
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon				
+			END 
+
+			PATCH_IF ("%prof%" = 100 AND "%type%" = 22) BEGIN //morningstar
+				WRITE_SHORT 0x31 95 //spiked [scimitar]	  
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 damagetype = 6 speed = 5 range = 1 END
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon		
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon
+			END 
+			PATCH_IF ("%prof%" = 100 AND "%type%" = 23) BEGIN //flail
+				WRITE_SHORT 0x31 95 //spiked [scimitar]	  
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=4 dicenumber=2 damagetype = 6 speed = 5 range = 1 END
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon			
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon
+			END 
+			
+			PATCH_IF ("%prof%" = 101) BEGIN //mace
+				WRITE_SHORT 0x31 93 //blunt [2h sword]	
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=6 dicenumber=1 damagetype = 2 speed = 3 range = 1 END	
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon
+				WRITE_BYTE 0x19 (flags2 AND 96) //light weapon				
+			END
+			PATCH_IF ("%prof%" = 97 AND ("%strreq%" > 8)) BEGIN //warhammer
+				WRITE_SHORT 0x31 93 //blunt [2h sword]	
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 damagetype = 2 speed = 5 range = 1 END	
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon				
+			END
+			PATCH_IF ("%prof%" = 97 AND ("%strreq%" <= 8)) BEGIN //throwing hammer
+				WRITE_SHORT 0x31 93 //blunt [2h sword]	
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=4 dicenumber=1 damagetype = 2 speed = 3 range = 1 END	
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=2 dicesize=4 dicenumber=1 damagetype = 2 speed = 3 range = 20 END	
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon
+				WRITE_BYTE 0x19 (flags2 AND 96) //light weapon				
+			END
+	
+			PATCH_IF ("%prof%" = 99) BEGIN //halberd
+				WRITE_SHORT 0x31 94  //polearm [katana]
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=10 dicenumber=1 damagetype = 3 speed = 9 range = 2 END	
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 2 parameter1 = 6 parameter2 = 4 timing = 2 STR_VAR resource = ~qdwphvm~ END //heavy: gnome 
+				LPF ADD_ITEM_EQEFFECT INT_VAR opcode = 177 target = 2 parameter1 = 5 parameter2 = 4 timing = 2 STR_VAR resource = ~qdwphvm~ END //heavy: halfling 
+				WRITE_BYTE 0x18 (flags1 | 0x02) //2-handed weapon			
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon				
+			END 
+			PATCH_IF ("%prof%" = 98) BEGIN //spear
+				WRITE_SHORT 0x31 94  //polearm [katana]
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 damagetype = 1 speed = 7 range = 2 END	
+				WRITE_BYTE 0x18 (flags1 | 0x02) //2-handed weapon			
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon				
+			END 
+			
+			PATCH_IF ("%prof%" = 92 AND ("%strreq%" > 9)) BEGIN //battleaxe
+				WRITE_SHORT 0x31 92 //axe [axe]	
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=8 dicenumber=1 damagetype = 3 speed = 5 range = 1 END	
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon
+				WRITE_BYTE 0x19 (flags2 | 0x20) //not light weapon				
+			END
+			PATCH_IF ("%prof%" = 92 AND ("%strreq%" <= 9)) BEGIN //throwing axe
+				WRITE_SHORT 0x31 93 //axe [axe]
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=1 dicesize=6 dicenumber=1 damagetype = 3 speed = 3 range = 1 END	
+				LPF ALTER_ITEM_HEADER INT_VAR header_type=2 dicesize=6 dicenumber=1 damagetype = 3 speed = 3 range = 20 END	
+				WRITE_BYTE 0x18 (flags1 AND 126) //1-h weapon
+				WRITE_BYTE 0x19 (flags2 AND 96) //light weapon				
+			END
+			
+			PATCH_IF ("%prof%" = 106 || //dart 
+					  "%prof%" = 107) BEGIN //sling
+				WRITE_SHORT 0x31 96 //thrown [dagger]	  
+			END 
+			PATCH_IF ("%prof%" = 103) BEGIN //crossbow
+				WRITE_SHORT 0x31 97	 //crossbows [warhammer]
+			END 
+			PATCH_IF ("%prof%" = 104 || //longbow 
+					  "%prof%" = 105) BEGIN //shortbow
+				WRITE_SHORT 0x31 115 //bows [club]	  
+			END 
+		END
+		
+	//after all other updates, need to fix enchantment bonuses to damage/hit
+	
+	BUT_ONLY 
+
+//set up armor and shield proficiency blocking 
+COPY ~5eo/data/items~ ~override~ //armor and shield checks
+
+	
+//modify armors as per table in readme 
+
+//modify shields as per table in readme 

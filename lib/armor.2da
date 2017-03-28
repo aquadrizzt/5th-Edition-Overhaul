@@ -1,0 +1,136 @@
+//AC = base AC 
+//STR = STR req 
+//DEX = max Dex Mod 
+//Stlth = 0-none, 1-disadvantage 
+//Type = 1-light, 2-medium, 3-heavy 
+
+//			AC		STR		DEX 	Stlth	Type	
+Leather		9		0		10		0 		1
+Studded		8		0		10		0		1
+Hide		7		0		2		0		2	
+Scale		6		0		2		1		2
+Plate		5		0		2		1		2
+Chain		4		13		0		1		3
+Splint		3		15		0		1		3
+FullPlate 	2		15		0		1		3
+
+Weapon Groups 
+- Basic: Clubs, Daggers, Quarterstaffs [BASTARD SWORD]
+- Light Blades: Longsword, Scimitar, Shortsword [LONGSWORD]
+- Heavy Blades: Bastard Sword, Katana, Greatsword [SHORTSWORD]
+- Spiked: Flails, orningstar [SCIMITAR]
+- Blunt: Mace, Warhammer, Throwing Hammer [2H SWORD]
+- Polearms: Spears, Halberds [KATANA]
+- Axes: Battleaxe, Greataxe, Throwing Axe [AXE]
+- Thrown: Darts, Slings [DAGGER]
+- Crossbows [WARHAMMER]
+- Bows: Longbow, Shortbow [CLUB]
+- Spells [SPEAR]
+Barbarian: All 
+Bard: Basic, Thrown, Crossbows, Light Blades 
+Cleric: Basic, Thrown, Spiked, BLunt
+Druid: Basic, Thrown, Polearms, Light Blades 
+Fighter: All 
+Monks: Basic, Thrown, Light Blades 
+Paladin: All 
+Ranger: All 
+Rogue: Basic, Thrown, Light Blades, Bows, Crossbows 
+Sorcerer: Basic, Thrown 
+Warlock: Basic, Thrown, Crossbows, Light Blades
+Wizard: Basic, Thrown 
+
+
+Design Notes
+- none proficiency penalty with weapons is -2. 
+- prof bonus goes from +2 to +9 (1st to 30th)
+- XP progression is 3x the 5e progression (fast for 1st - 3rd, slow for 4th-8th, fast for rest.) 
+- Max level is 30, at 20 each new level requires 100k xp. 
+- prof advances beyond 20th, but hp do not. 
+- Max level in BGEE (BG+TOSC+SOD) is 10. [might need to bump up a bit depending on sod]
+
+Saves
+Death -> Strength
+Wand -> Dexterity
+Poly -> Constitution 
+Breath -> Intelligence
+Spells -> Wisdom 
+
+SPLPROT Lines
+(138) KITEQUAL		152		-1		1 		//checks if kit is eq to specified		
+(139) WISCHAGTEQ	0x103	130		132		//checks wis or chr is greater than X 
+(140) RESCRUSHLT	22		-1		2
+(141) RESPIERCLT	23		-1		2
+(142) RESSLASHLT	21		-1		2
+(143) RESRADNTLT	19		-1		2
+(144) RESNECROLT	20		-1		2	
+
+
+
+
+Advantage/Disadvantage/Res/Vuln
+150: Adv Melee Hit 
+151: Dis Melee Hit 
+152: Adv Ranged Hit
+153: Dis Ranged Hit 
+154: Adv Str Saves [death]
+155: Dis Str Saves
+156: Adv Dex Saves [wand]
+157: Dis Dex Saves
+158: Adv Con Saves [poly]
+159: Dis Con Saves
+160: Adv Int Saves [breath]
+161: Dis Int Saves
+162: Adv Wis Saves [spells]
+163: Dis Wis Saves 
+164: Adv Perception [Detect Traps/Detect Illusions]
+165: Dis Perception [Detect Traps/Detect Illusions]
+166: Adv Thievery [Open Locks, Pick Pockets, Set Traps]
+167: Dis Thievery [Open Locks, Pick Pockets, Set Traps]
+168: Adv Stealth [Hide, Move SIlently, Stealth]
+169: Dis Stealth [Hide, Move SIlently, Stealth]
+
+170: Adv vs. Frightened 
+171: Dis vs. Frightened
+172: Adv vs. Charmed
+173: Dis vs. Charmed 
+174: Adv vs. Poisoned
+175: Dis vs. Poisoned 
+176: Adv vs. Spells 
+177: Dis vs. Spells 
+178  Adv on Defense [incoming attackers have disadvantage]
+179  Dis on Defense [incoming attackers have advantage]
+190: Res Fire 
+191: Vuln Fire
+192: Imm Fire 
+193: Res Cold
+194: Vuln Cold
+195: Imm Cold 
+196: Res Acid 
+197: Vuln Acid
+198: Imm Acid 
+199: Res Lightning
+200: Vuln Lightning
+201: Imm Lightning 
+202: Res Force
+203: Vuln Force
+204: Imm Force
+205: Res Crush
+206: Vuln Crush
+207: Imm Crush 
+208: Res Pierce
+209: Vuln Pierce
+210: Imm Pierce
+211: Res Slash
+212: Vuln Slash 
+213: Imm Slash 
+214: Res Poison
+215: Vuln Poison 
+216: Imm Poison 
+217: Res Radiant
+218: Vuln Radiant
+219: Imm Radiant 
+220: Res Necrotic 
+221: Vuln Necrotic 
+222: Imm Necrotic 
+230: normal weapon resistance [half damage of non-magical weapons]
+(all are included except the special save bonuses 170-177)

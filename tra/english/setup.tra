@@ -1,0 +1,486 @@
+@0 = ~5th Edition Overhaul~ 
+
+//Racial Descriptions
+
+@1 = ~HUMANS: Humans are the predominant race in Faerûn. Humans rule most of the significant empires and kingdoms in the realms. They are the most social and tolerant of races, excepting perhaps the halflings. 
+
+Humans have the following traits: 
+– +1 to all ability scores.~ 
+
+@2 = ~ELVES: Elves tend to be shorter and slimmer than humans. Their features are finely chiseled and delicate, and they speak in melodic tones. Elves are looked upon as being frivolous and aloof. They concern themselves with natural beauty, dancing, frolicking, and other similar pursuits. Their humor is clever, as are their songs and poetry. 
+
+Elves have the following traits: 
+– +2 Dexterity, +1 Wisdom. 
+– Infravision. 
+– Proficiency with light blades and bows. 
+– Advantage on saving throws against being charmed. 
+– Immunity to magical sleep effects. 
+– Advantage on Detect Traps and Detect Illusions checks.~ 
+
+@3 = ~HALF-ELVES: Half-elves are a mix of human and elven blood. They are handsome folk, with good features from each of their parent races. A half-elf has the curiosity, inventiveness, and ambition of their human ancestors and the refined senses, love of nature, and artistic tastes of their elven ancestors.
+
+Half-elves have the following traits: 
+– +2 Charisma. 
+– Infravision. 
+– Advantage on saving throws against being charmed. 
+– Immunity to magical sleep effects. 
+– After character creation, may increase two ability scores, excluding Charisma, by 1 each.~ 
+
+@4 = ~DWARVES: Dwarves are short and stocky, easily identifiable by their size and shape. They have ruddy cheeks, dark eyes, and dark hair. Dwarves tend to be dour and taciturn. They are given to hard work, and care little for most humor. They enjoy beer, ale, mead, but most of all, they love gold.
+
+Dwarves have the following traits: 
+– +2 Constitution, +1 Wisdom. 
+– Infravision. 
+– +1 hit point per level. 
+– Proficiency with axes and hammers.
+– Advantage on saving throws against being poisoned. 
+– Resistance to poison damage.~ 
+
+@5 = ~HALFLINGS: Halflings are short, generally plump people, very much like small humans. Their faces are round and broad, and often quite florid. Their hair is typically curly, and the tops of their feet are covered with coarse hair. Overall they prefer the comforts of home to dangerous adventuring. They enjoy good living, rough humor, and homespun tales. 
+
+Halflings have the following traits: 
+– +2 Dexterity, +1 Charisma. 
+– +1 bonus to luck (affects attack rolls, minimum damage, and all saving throws). 
+– +2 bonus to weapon and casting speed factor. 
+– +5% bonus to all skills.
+– Advantage on Stealth, Hide, and Move Silently checks. 
+– Advantage on saving throws against being frightened.
+– Disadvantage on attack rolls with heavy weapons.~ 
+
+@6 = ~GNOMES: Kin to dwarves, gnomes are noticeably smaller than their distant cousins. Gnomes, as they proudly maintain, are also less rotund than dwarves. Most have dark tan or brown skin, white hair, and rather large noses. Gnomes have lively and sly senses of humor, especially for practical jokes. They have a love for nature that is only matched by their love for gems and jewelry.
+
+Gnomes have the following racial traits:
+– +2 Intelligence, +1 Constitution. 
+– Infravision. 
+– +2 bonus to weapon and casting speed factor. 
+– +1 lore per level. 
+– Advantage on saving throws against magic.
+– Disadvantage on attack rolls with heavy weapons.  ~ 
+
+@7 = ~HALF-ORCS: Half-orcs are born from the union of human and orc parents. They are as tall as humans, but a little heavier due to their muscular builds. Their greenish pigmentation, sloping forehead, jutting jaw, prominent teeth, and coarse body hair make their lineage plain for all to see. In the Sword Coast, half-orcs are tolerated, as unlike in the north the local people haven't had centuries of warfare with orc kind. Half-orcs are known for their great strength.
+
+Half-orcs have the following racial traits: 
+– +2 Strength. 
+– Infravision. 
+– Proficiency with heavy blades and spiked weapons.
+– +2 bonus to damage with melee weapons.
+– After character creation, may increase two ability scores (excluding Strength) by 1 each.~ 
+
+//Ability Scores Descriptions
+@10 = ~STRENGTH: Strength measures a character's muscle, endurance, and stamina. Strength is most important to Barbarians, Fighters, and Paladins.
+
+Strength affects: 
+– Attack and damage rolls with melee weapons. 
+– Carrying capacity. 
+– Forcing locks. 
+– Saves against physical restraints or forced motion. 
+
+Minimum: <MINIMUM>
+Maximum: <MAXIMUM>~ 
+
+@11 = ~DEXTERITY: Dexterity measures a character's hand-eye coordination, agility, reflexes, and balance. While all characters can benefit from Dexterity, it is most important to Monks, Rangers, and Rogues.  
+
+Dexterity affects: 
+– Armor Class.
+– Attack rolls with ranged weapons. 
+– Speed factor. 
+– Open Locks, Pick Pockets, Stealth, and Set Traps checks.  
+– Saves against traps and area of effect spells.
+ 
+Minimum: <MINIMUM>
+Maximum: <MAXIMUM>~ 
+
+@12 = ~CONSTITUTION: Constitution measures a character's fitness, health, and physical resistance to hardship, injury, and disease. All characters can benefit from Constitution, but it is especially important for Barbarians. 
+
+Constitution affects: 
+– Hit points. 
+– Saves against poisons. 
+
+Minimum: <MINIMUM>
+Maximum: <MAXIMUM>~
+
+@13 = ~INTELLIGENCE: Intelligence measures a character's memory, reasoning, and learning ability. Intelligence is most important to Wizards. 
+
+Intelligence affects: 
+- Lore 
+– Saves against illusions and insanity. 
+
+Minimum: <MINIMUM>
+Maximum: <MAXIMUM>~ 
+
+@14 = ~WISDOM: Wisdom measures a character's enlightenment, judgment, and common sense. Wisdom is very important to Clerics, Druids, Monks, and Rangers. 
+
+Wisdom affects: 
+- Lore. 
+– Detect Traps and Detect Illusions checks. 
+– Saves against mind-altering effects and magical restraints. 
+
+
+Minimum: <MINIMUM>
+Maximum: <MAXIMUM>
+
+NOTE: Wisdom and Charisma share a saving throw. You add whichever modifier is higher to this saving throw.~ 
+
+@15 = ~CHARISMA: Charisma measures a character's persuasiveness, personal magnetism, and ability to lead. This ability is important to Bards, Paladins, and Sorcerers. 
+
+Charisma affects: 
+– Saves against alignment-dependent effects.
+– Dialog options. 
+
+Minimum: <MINIMUM>
+Maximum: <MAXIMUM>
+
+NOTE: Wisdom and Charisma share a saving throw. You add whichever modifier is higher to this saving throw.~ 
+
+//Weapon proficiency 
+@20 = ~Basic~
+@21 = ~Light Blade~ 
+@22 = ~Heavy Blade~
+@23 = ~Axe~ 
+@24 = ~Blunt~ 
+@25 = ~Polearm~ 
+@26 = ~Spiked~ 
+@27 = ~Thrown~ 
+@28 = ~Crossbow~ 
+@29 = ~Bow~ 
+
+@30 = ~BASIC WEAPON: Basic weapons are weapons that any adventurer, and even most non-adventurers, can use.  
+
+Basic weapons include clubs, daggers, and staves.~ 
+
+@31 = ~LIGHT BLADE: Light blades are one-handed blades designed for use in fast-paced, close-quarter combat. 
+
+Light blades include longswords, scimitars, and shortswords.~ 
+
+@32 = ~HEAVY BLADE: Heavy blades are large blades typically wielded with both hands. 
+
+Heavy blades include bastard swords, greatswords, and katanas.~ 
+
+@33 = ~AXE: [filler] 
+
+Axes include battleaxes, greataxes, and throwing axes.~ 
+
+@34 = ~BLUNT: [filler]
+
+Blunt weapons include maces, throwing hammers, and warhammers.~ 
+
+@35 = ~POLEARM: Polearms are bladed weapons with a long haft, made for use with both hands. 
+
+Polearms include halberds and spears.~ 
+
+@36 = ~SPIKED: Spiked weapons are [filler]
+
+Spiked weapons include flails and morningstars.~ 
+
+@37 = ~THROWN: Thrown weapons are small weapons designed to be thrown at enemies from a short range. 
+
+Thrown weapons include darts and slings.~
+
+@38 = ~CROSSBOW: Crossbows are deadly ranged weapons that require great strength to wield and have a slow firing rate. 
+
+Crossbows include hand crossbows and heavy crossbows.~ 
+
+@39 = ~BOW: Bows are weapons designed for long ranged attacks with arrows. 
+
+Bows include composite longbows, longbows, and shortbows.~ 
+
+//saving throws
+@40 = ~Strength~ 
+@41 = ~Dexterity~
+@42 = ~Constitution~
+@43 = ~Intelligence~
+@44 = ~Wisdom / Charisma~
+
+@45 = ~Save vs. Strength~
+@46 = ~Save vs. Dexterity~
+@47 = ~Save vs. Constitution~
+@48 = ~Save vs. Intelligence~
+@49 = ~Save vs. Wisdom / Charisma~
+
+@50 = ~Failed Save vs. Strength~
+@51 = ~Failed Save vs. Dexterity~
+@52 = ~Failed Save vs. Constitution~
+@53 = ~Failed Save vs. Intelligence~
+@54 = ~Failed Save vs. Wisdom / Charisma~
+
+@55 = ~Strength Saving Throw Reduced by~
+@56 = ~Dexterity Saving Throw Reduced by~
+@57 = ~Constitution Saving Throw Reduced by~
+@58 = ~Intelligence Saving Throw Reduced by~
+@59 = ~Wisdom / Charisma Saving Throw Reduced by~
+
+@60 = ~force~ 
+@61 = ~radiant~ 
+@62 = ~necrotic~ 
+@63 = ~psychic~ 
+@64 = ~Radiant~ 
+@65 = ~Necrotic~ 
+@66 = ~Force~ 
+
+@67 = ~Spell~
+@68 = ~SPELL: Various spells will require attack rolls to determine whether they hit the caster's enemy or not. Casters are always proficient with their spell attacks, and gain a bonus to attack rolls with their spells equal to the modifier of their spellcasting ability. 
+
+NOTE: Due to an engine limitation, the bonus to attack rolls for spells is limited to +6; an ability score of 24 or higher will not further improve the spell attack roll. Furthermore, negative abilty modifiers will not be applied.~ 
+
+@69 = ~Armor~
+@70 = ~ARMOR: [...]
+
+Characters wearing armor beyond their proficiency may not cast spells and have disadvantage on all Attack rolls, Stealth checks, and Thievery checks. 
+
+Light (1 slot): You may wear Leather and Studded Leather armors. 
+
+Medium (2 slots): You may wear Hide and Chain Mail armors. 
+
+Heavy (3 slots): You may wear Splint Mail, Plate Mail, and Full Plate armors.~
+
+@71 = ~Shield~ 
+@72 = ~SHIELD: [...]
+
+Characters using shields beyond their proficiency may not cast spells and have disadvantage on all Attack rolls, Stealth checks, and Thievery checks. 
+
+Light (1 slot): You may use Bucklers. 
+
+Medium (2 slots): You may use Shields. 
+
+Heavy (3 slots): You may use Tower Shields. ~
+
+
+
+
+
+@1000 = ~champion~ 
+@1001 = ~Champion~ 
+@1002 = ~CHAMPION: [description] 
+
+CLASS FEATURES: 
+
+Base Class: Fighter 
+Hit Die: d10 
+Armor: Any, Shields
+Weapons: All 
+Saving Throws: Strength and Constitution
+
+– (1) Fighting Style*: May select one of several Fighting Styles, granting bonuses to a select way of fighting. An additional Fighting Style is obtained at 10th. 
+– (1) Second Wind: Regain hit points equal to d10 + your level. This ability is usable once per day. 
+– (2) Action Surge: You may act for an additional round while others remain frozen in time. This ability is usable once per day; an additional use is gained at 17th.
+– (3) Improved Critical: Gain a +5% bonus to Critical Hit chance. This improves to +10% at 15th. 
+– (5) Extra Attack: Gains a +1 bonus to Attacks per Round. This improves to +2 at 11th and +3 at 20th. 
+– (7) Remarkable Athlete: You add your Strength modifier to your movement speed. 
+– (9) Indomitable: For 6 seconds, gain advantage on all saving throws. This ability is usable once per day; additional uses are gained at 13th and 17th.
+– (18) Survivor: While you are below 50% of your maximum health, you regenerate hit points equal to 5 + your Constitution modifier every round. 
+
+* – Abilities marked with an asterisk are available through the Character Options innate ability.~
+
+@1003 = ~eldritch knight~ 
+@1004 = ~Eldritch Knight~ 
+@1005 = ~ELDRITCH KNIGHT: [description] 
+
+Base Class: Fighter 
+Hit Die: d10 
+Armor: Any, Shields
+Weapons: All 
+Saving Throws: Strength and Constitution. 
+Spellcasting Ability: Intelligence 
+
+– (1) Fighting Style*: You may select one of several Fighting Styles, granting bonuses to a select way of fighting. 
+– (1) Second Wind: Regain hit points equal to d10 + your level. This ability is usable once per day. 
+– (2) Action Surge: You may act for an additional round while others remain frozen in time. This ability is usable once per day; an additional use is gained at 17th. 
+– (3) Spellcasting: You may cast a small number of arcane spells from the schools of Abjuration and Evocation. 
+– (3) Cantrips: You gain two cantrips, which you may use at will. A third cantrip is gained at 10th. 
+– (5) Extra Attack: You gain a +1 bonus to Attacks per Round. This improves to +2 at 11th and +3 at 20th. 
+– (7) War Magic: Whenever you use a cantrip, you gain +1 Attack per Round for 6 seconds.
+– (9) Indomitable: For 6 seconds, gain advantage on all saving throws. This ability is usable once per day; additional uses are gained at 13th and 17th.
+– (10) Eldritch Strike: Your successful weapon attacks apply disadvantage on saves against magic for 1 round.    
+– (15) Arcane Charge: During your Action Surges, your movement speed is doubled.  
+– (18) Improved War Magic: Whenever you cast a spell, you gain +1 Attack per Round for 6 seconds.
+
+* – Abilities marked with an asterisk are available through the Character Options innate ability.~
+
+@1006 = ~thief~ 
+@1007 = ~Thief~ 
+@1008 = ~THIEF: [description]
+
+Base Class: Rogue 
+Hit Die: d8 
+Armor: Light
+Weapons: Basic, Thrown, Light Blades, Bows, Crossbows  
+Saving Throws: Dexterity and Intelligence 
+
+– (1) Expertise*: You gain a +25% bonus to one set of skills. 
+– (1) Sneak Attack 
+– (3) Swift Escape: You add your Dexterity modifier to your movement speed. 
+– (5) Uncanny Dodge: For 6 seconds, you gain resistance to all damage types until you take damage. This ability is usable a number of times per day equal to your Dexterity modifier.  
+– (7) Evasion: Effects that allow for a Dexterity saving throw for half damage now deal no damage to you on a successful save and half damage on an failed save. 
+– (9) Supreme Sneak: You gain a modal ability that grants advantage on Stealth at the cost of halving your movement speed. 
+– (13) Use Magic Device: You may use any magic item, even ones that you would normally not be able to use due to race, alignment, class, or level. 
+– (14) Blindsense: You passively detect invisible creatures within 10 feet. 
+– (15) Slippery Mind: You become proficient in Wisdom saving throws. 
+– (17) Lightning Reflexes: When you first see an enemy, you take an additional round while others remain frozen in time. Due to your enemies' surprise, you have advantage on attack rolls. This ability can only activate once per 10 minutes. 
+– (18) Elusive: You have advantage against attack rolls. 
+– (20) Stroke of Luck: For 6 seconds, you have a +20 bonus to luck, granting you +20 to all saves and attacks, +100% to all skills, maximized outgoing damage and minimized incoming damage. This ability is usable once per day.
+~
+/*
+@1009 = ~assassin~ 
+@1010 = ~Assassin~ 
+@1011 = ~ASSASSIN: [description]
+
+Base Class: Rogue 
+Hit Die: d8 
+Armor: Light
+Weapons: Basic, Thrown, Light Blades, Bows, Crossbows  
+Saving Throws: Dexterity and Intelligence 
+
+– (1) Expertise*: You gain a +25% bonus to one set of skills. 
+– (1) Sneak Attack 
+– (3) Poison Specialist: You are immune to poison damage and the poisoned condition. Furthermore, you can poison your weapon for 1 minute once per day. Creatures hit by your poisoned weapons must make a Constitution saving throw (+5 bonus) or take 1d4 points of poison damage. 
+– (5) Uncanny Dodge: The first time you take damage each round, that damage is halved. 
+– (7) Evasion: Effects that allow for a Dexterity saving throw for half damage now deal no damage to you on a successful save and half damage on an failed save. 
+– (9) ???: You gain a modal ability that grants advantage on Stealth at the cost of halving your movement speed. 
+– (13) ???: You may use any magic item, even ones that you would normally not be able to use due to race, alignment, class, or level. 
+– (14) Blindsense: You can detect invisible creatures within 10 feet. 
+– (15) Slippery Mind: You become proficient in Wisdom saving throws. 
+– (17) ???: When you first see an enemy, you take an additional round while others remain frozen in time. This ability can only activate once per 10 minutes. 
+– (18) Elusive: You have advantage against attack rolls. 
+– (20) Stroke of Luck: For 6 seconds, you have a +20 bonus to luck, granting you +20 to all saves and attacks, +100% to all skills, maximized outgoing damage and minimized incoming damage. This ability is usable once per day.
+~
+*/
+/*@1006 = ~arcane trickster~  
+@1007 = ~Arcane Trickster~ 
+@1008 = ~ARCANE TRICKSTER: [description] 
+
+Base Class: Rogue 
+Hit Die: d8 
+Armor: Light
+Weapons: Basic, Thrown, Light Blades, Bows, Crossbows  
+Saving Throws: Dexterity and Intelligence 
+Spellcasting Ability: Intelligence 
+
+– (1) Expertise*: You may gain a +25% bonus to one set of skills. 
+– (1) Sneak Attack 
+– (1) Trickster: You know the Spectral Thief and Enter Shadows cantrips. 
+– (3) Spellcasting: You may cast a small number of arcane spells from the schools of Enchantment and Illusion.
+– (3) Cantrips: You gain a third cantrip, which you may use at will. A fourth cantrip is gained at 10th. 
+– (5) Uncanny Dodge: The first time you take damage each round, that damage is halved. 
+– (7) Evasion: Effects that allow for a Dexterity saving throw for half damage now deal no damage to you on a successful save and half damage on an failed save. 
+– (14) Blindsense: You can detect invisible creatures within 10 feet. 
+– (15) Slippery Mind: You become proficient in Wisdom saving throws. 
+– (18) Elusive: Attacks against you are made with disadvantage. 
+– (20) Stroke of Luck: For 6 seconds, you have a +20 bonus to luck, granting you +20 to all saves and attacks, +100% to all skills, maximized outgoing damage and minimized incoming damage. This ability is usable once per day.
+
+NOTE: Spectral Thief is the method by which an Arcane Trickster may use their thieving abilities (Open Locks, Pick Pockets, Remove Traps). Enter Shadows simulates Stealth. 
+~ */
+//@1006 = ~lifewarden~ 
+//@1007 = ~Lifewarden~
+/*@1008 = ~LIFEWARDEN OF CHAUNTEA: [description]
+
+CLASS FEATURES: 
+
+Base Class: Cleric 
+Hit Die: d8 
+Armor: Any, Shields 
+Weapons: Basic, Thrown, Blunt, Spiked  
+Saving Throws: Intelligence, Wisdom
+Spellcasting Ability: Wisdom 
+
+– (1) Spellcasting: You may cast divine spells. 
+– (1) Disciple of Life: Whenever you cast a healing spell it heals an additional 2 + spell level hit points. 
+– (2) Channel Divinity: You may use Turn Undead or Preserve Life once per day. Additional uses are gained at 6th and 18th. 
+– (6) Blessed Healer: Whenever you cast a healing spell, you regain hit points equal to 2 + spell level. 
+– (8) Divine Strike: Your attacks deal +d8 magic damage. This improves to +2d8 at 14th. 
+– (17) Supreme Healing: Whenever you cast a healing spell, the dice rolls are maximized.
+
+TURN UNDEAD: For 30 seconds, you turn undead within range. Turned undead become frightened and run away from you. At higher levels, weak undead creatures might even be destroyed. 
+
+PRESERVE LIFE: Allies within 30 feet are healed a number of hit points equal to twice your level (maximum 40 hit points at 20th level).
+~  */
+
+@2000 = ~Character Options~ 
+@2001 = ~Character Options
+
+This ability opens a dialog menu where you make choices for various character features.~ 
+
+
+@2002 = ~Second Wind~ 
+@2003 = ~Second Wind 
+
+You regain hit points equal to d10 + your level (up to a maximum +20).~ 
+
+@2004 = ~Action Surge~ 
+@2005 = ~Action Surge 
+
+You may act for 1 round while others remain frozen in time.~
+
+@2006 = ~Indomitable~ 
+@2007 = ~Indomitable 
+
+You have advantage on all saving throws for 1 round.~ 
+
+@2008 = ~Stroke of Luck~ 
+@2009 = ~Stroke of Luck
+
+You gain a +20 bonus to luck for 1 round. You do maximum damage, take minimum damage, have a +20 bonus to saves and to hit and a +100% bonus to all skills.~
+@200 = ~lifewarden~ 
+@201 = ~Lifewarden~ 
+@202 = ~LIFEWARDEN OF CHAUNTEA: [description]
+
+CLASS FEATURES: 
+
+Base Class: Cleric 
+Hit Die: d8 
+Armor: Any, Shields 
+Weapons: Basic, Thrown, Blunt, Spiked  
+Saving Throws: Intelligence, Wisdom
+
+– (1) Spellcasting: May cast divine spells. 
+– (1) Disciple of Life: Whenever you cast a healing spell it heals an additional 2 + spell level hit points. 
+– (2) Channel Divinity: May use Turn Undead or Preserve Life once per day. Additional uses are gained at 6th and 18th. 
+– (6) Blessed Healer: Whenever you cast a healing spell, you regain hit points equal to 2 + spell level. 
+– (8) Divine Strike: Your attacks deal +d8 magic damage. This improves to +2d8 at 14th. 
+– (17) Supreme Healing: Whenever you cast a healing spell, the dice rolls are maximized.
+
+TURN UNDEAD: For 30 seconds, you turn undead within range. Turned undead become frightened and run away from you. At higher levels, weak undead creatures might even be destroyed. 
+
+PRESERVE LIFE: Allies within 30 feet are healed a number of hit points equal to twice level.~ 
+
+@300 = ~dragon disciple~
+@301 = ~Dragon Disciple~
+@302 = ~DRAGON DISCIPLE: [description] 
+
+CLASS FEATURES: 
+
+Base Class: Sorcerer
+Hit Die: d6
+Armor: None 
+Weapons: Basic, Thrown 
+Saving Throws: Constituion, Wisdom 
+
+– (1) Spellcasting: May cast arcane spells. 
+– (1) Draconic Ancestor*: May select a Draconic ancestor, which determines the damage type that you use for your class features. 
+– (1) Draconic Resilience: Your base armor class becomes 7 and you gain 1 additional hit point per level. 
+– (2) Font of Magic: You gain 2 Sorcery Points, which you may spend to modify spells or gain bonus slots for the day. New uses for Sorcery Points are gained at 3rd, 6th, 10th, 14th, 17th, and 18th. Additional Sorcery points are gained at 5th, 9th, 13th, and 17th.   
+– (6) Elemental Affinity: Whenever you deal damage of the type associated with your ancestor, you deal +20% more. 
+– (14) Dragon Flight: You gain take flight as an action. While taking flight, enemies attacking you with melee weapons have disadvantage, but you suffer disadvantage to all attack rolls. 
+
+SORCERY POINT: You have a pool of Sorcery points. You may choose one of the following options each time you use a Sorcery point. 
+– Recharge an expended 1st level spell slot. 
+– (3rd) Gain Vocalize for 1 minute. 
+– (6th) Gain resistance to the damage type associated with your ancestor for 10 minutes. 
+– (10th) Recharge an expended 2nd level spell slot.  
+– (17th) Recharge an expended 3rd level spell slot.
+– (18th) All enemies within 60 feet must make a Wisdom saving throw. If it succeeds, they are immune to this effect for 24 hours. If it fails, they are frightened for 2 rounds.~
+
+@400 = ~assassin~ 
+@401 = ~Assassin~ 
+@402 = ~ASSASSIN: [description] 
+
+CLASS FEATURES: 
+
+Base Class: Rogue
+Hit Die: d8 
+Armor: Light 
+Weapons: Basic, Thrown, Light Blades, Bows, Crossbows  
+Saving Throws: Dexterity, Intelligence 
+
+– (1) Expertise*: ??? 
+– (1) Sneak Attack: You deal additional damage while you have advantage on an attack with a dagger, scimitar, shortsword or ranged weapon. The additional damage begins at 1d6 and increases by 1d6 at odd levels up to 10d6 at 19th. 
+– ~
